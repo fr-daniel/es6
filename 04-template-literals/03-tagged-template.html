@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>03- Tagged Template</title>
+        <style>
+            .green{
+                color: green;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="conteudo"></div>
+        <script>
+            const city = 'Dublin';
+            const someThing = 'Guinness';
+            const otherThing = 'Leprechaums';
+
+            function green( template, ...values ){
+                return template.reduce( ( accumulator, part, i ) => {
+                    return `
+                        ${accumulator}
+                        <span class="green">${values[i - 1]}</span>
+                        ${part}
+                    `
+                });
+            }
+
+            const ireland = green`I live in ${city} the city of ${someThing} and ${otherThing}!`;
+
+            const $divConteudo = document.querySelector('.conteudo');
+            $divConteudo.innerHTML = ireland;
+        </script>
+    </body>
+</html>

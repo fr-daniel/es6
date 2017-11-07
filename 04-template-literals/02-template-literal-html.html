@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>02- Uses Template Literals in HTML</title>
+    </head>
+    <body>
+        <div class="conteudo"></div>
+        <script>
+            const article = {
+                title: 'Aprendendo Template String',
+                intro: 'Uma breve explicação de como utilizar o template string do ES6 no seu código hoje',
+                body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quae blanditiis pariatur saepe reprehenderit, dolores totam in dolor! Quo quis, mollitia nostrum assumenda pariatur perferendis ratione harum consequuntur quae eos?',
+                tags: [ 'es6', 'js', 'template-literal' ],
+            };
+
+            function hasAutor( autor ){
+                return autor ? autor : 'unknown';
+            }
+
+            const markup = `
+                <article>
+                    <header>
+                        <hgroup>
+                            <h1>${article.title}</h1>
+                            <h2>${article.intro}</h2>
+                        </hgroup>
+                    </header>
+                    <p>${article.body}</p>
+                    <footer>
+                        <ul>
+                            ${article.tags.map( tag => `<li>${tag}</li>` ).join('')}
+                        </ul>
+                        <small>Autor: ${hasAutor(article.autor)}</small>
+                    </footer>
+                </article>
+            `;
+
+            let $divConteudo = document.querySelector('.conteudo');
+            $divConteudo.innerHTML = markup;
+        </script>
+    </body>
+</html>
