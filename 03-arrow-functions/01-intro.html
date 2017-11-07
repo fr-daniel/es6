@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01 - Intro Arrow Function</title>
+</head>
+<body>
+    <script>
+        const ceara = [ 'Quixadá', 'Fortaleza', 'Quixeramobim' ];
+
+        const love = ceara.map( function( name ) {
+            return `I love ${name}`;
+        });
+
+        //Arrow Function
+        const loveArrow = ceara.map( ( name ) => {
+            return `I love ${name}!`;
+        });
+        console.log( loveArrow );
+
+        //Arrow com apenas um parâmetro
+        const loveArrowSingle = ceara.map( name => {
+            return `I love ${name}!`;
+        });
+        console.log( loveArrowSingle );
+
+        //Arrow com apenas uma linha
+            //não é necessário chaves e return
+        const loveArrowOneLine = ceara.map( name => `I love ${name}!` )        
+        console.log( loveArrowOneLine );
+
+        const loveChain = ceara
+                            .filter( name => name === 'Quixadá' )
+                            .map( name => `I love ${name}!` );
+        console.log( loveChain );
+
+        console.log( love );
+
+    </script>
+</body>
+</html>

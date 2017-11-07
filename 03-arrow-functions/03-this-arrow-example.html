@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>03 - This no Arrow Function</title>
+</head>
+<body>
+    <button id="btn">Click me!</button>
+
+    <script>
+        const sandwich = {
+            bread: 'white',
+            cheese: 'cheddar',
+
+            prepare: function(){
+                return `I want a sandwich with ${this.bread} bread and ${this.cheese}`;
+            },
+
+            make: function(){
+                /*var that = this;
+                window.setTimeout(function(){
+                    console.log( that.prepare() );
+                    //this é o objeto
+                }, 500);
+                */
+                window.setTimeout( () => {
+                    console.log( this.prepare() );
+                }, 500 );
+            }
+        };
+
+        const btn = document.getElementById('btn');
+        btn.addEventListener( 'click', function(){
+            sandwich.make();
+        });
+
+    </script>
+</body>
+</html>
