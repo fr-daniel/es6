@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>01 - Escopo no JS</title>
+    </head>
+    <body>
+
+        <script>
+            var animal; //global
+    
+            function sayAnimal(){
+                var animal = 'dog'; //local
+                console.log( animal );
+            }
+
+            sayAnimal();
+            console.log( animal );
+        </script>
+    </body>
+</html>
