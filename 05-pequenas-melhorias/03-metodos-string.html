@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>03 - Novos Métodos para String</title>
+    </head>
+    <body>
+        <div class="conteudo"></div>
+        <script>
+            let text = 'Lorem ipsum dolor sit amet';
+
+            //começa com? : boolean
+            // ( string, start )
+            console.log( text.startsWith('rem', 2) );
+
+            //termina com? : boolean
+            // ( string, start )
+            console.log( text.endsWith('amet') );
+
+            //existe na string? : boolean
+            console.log( text.includes('Daniel') );
+
+            //repetir
+            console.log( 'a'.repeat(10) );
+        </script>
+    </body>
+</html>

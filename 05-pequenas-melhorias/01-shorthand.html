@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>01 - Shorthand Properties</title>
+    </head>
+    <body>
+        <div class="conteudo"></div>
+        <script>
+            let firstName = 'Daniel';
+            let lastName = 'Lima';
+            let age = 19;
+
+            /*
+            const person = {
+                firstName: firstName,
+                lastName: lastName,
+                age: age,
+
+                hello: function(){
+                    console.log('Hello!');
+                }
+            };
+            */
+
+            const person = {
+                firstName,
+                lastName,
+                age,
+
+                hello() {
+                    console.log('Hello!');
+                }
+            }
+
+            console.log( person );
+            person.hello();
+        </script>
+    </body>
+</html>
