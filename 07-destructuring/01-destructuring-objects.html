@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>01 - Destructuring Objects</title>
+    </head>
+    <body>
+        <script>
+            var data = {
+                name: 'Daniel',
+                surname: 'Lima',
+                age: 19,
+                blog: 'https://www.frdaniel.com.br',
+                social: {
+                    facebook: '/fr.daniel.lima',
+                    twitter: '@fr_daniel_lima'
+                }
+            };
+
+            /*
+            const name = data.name;
+            const surname = data.surname;
+            const twitter = data.social.twitter;
+
+            console.log( name, surname, twitter );
+            */
+
+            const { name, surname } = data;
+            console.log( name, surname );
+
+            const { facebook, twitter } = data.social;
+            console.log( facebook, twitter );
+
+            //mudar o nome da variável
+            const { facebook: fb = 'facebook', twitter: tw } = data.social;
+            console.log( fb, tw );
+
+            //definidr valor default 
+            const { city = 'Quixadá', age = 10 } = data;
+            console.log( city, age );
+
+
+
+        </script>
+    </body>
+</html>

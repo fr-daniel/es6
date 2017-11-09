@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>01 - Destructuring Array</title>
+    </head>
+    <body>
+        <script>
+            const arr = [ 'Daniel', 'Lima', 19, 'Quixadá' ];
+
+            const [ name, surname, age, city, blog = 'Não definido' ] = arr;
+
+            console.log( name, surname, age, city, blog );
+
+        </script>
+    </body>
+</html>
