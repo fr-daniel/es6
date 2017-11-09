@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>01 - Spread Operator Intro</title>
+    </head>
+    <body>
+        
+        <script>
+            let front = [ 'vue', 'agular', 'react' ];
+            let back = [ 'node', 'java', 'python' ];
+
+            //Desmembramento de elementos interáveis    
+            console.log( [...'Daniel'] );
+            console.log( ...front );
+
+            //Juntando array
+            //Método antigo
+
+            /*let fullStack = [];
+            fullStack = fullStack.concat(front);
+            fullStack.push('RxJS');
+            fullStack = fullStack.concat(back);
+
+            console.log( fullStack );
+            */
+
+            let fullStack = [ ...front, 'RxStack', ...back ];
+            console.log( fullStack );
+
+        </script>
+    </body>
+</html>
