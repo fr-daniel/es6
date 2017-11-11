@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>04 - WeakMap Intro</title>
+    </head>
+    <body>
+
+        <script>
+            let nm = new WeakMap();
+
+            nm.set({name: 'Daniel', age: 19}, 'Info do Daniel');
+            nm.set({name: 'João', age: 29}, 'Info do João');
+
+            console.log(nm);
+
+            //Definições fracas
+            //Se o objeto for deletado do escopo, dentro do WeakMap ela também vai sumir
+            //apaga após perder a referência
+        </script>
+    </body>
+</html>
