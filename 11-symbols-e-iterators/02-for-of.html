@@ -21,6 +21,13 @@
                 if( letter === 'a' ) break;
             }
 
+            var cidades = ['Quixadá', 'Fortaleza'];
+            var iter = cidades[Symbol.iterator]();
+
+            for( cidade of cidades ) {
+                console.log(cidade);
+            }
+
         </script>
     </body>
 </html>
