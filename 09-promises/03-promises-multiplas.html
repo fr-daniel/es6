@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>03 - Promises Multiplas</title>
+    </head>
+    <body>
+
+        <script>
+            const currency = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve({currency: 'euro', value: 3.50});
+                }, 2000);
+            });
+
+            const countries = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(['Ireland', 'England', 'Scotland']);
+                }, 600);
+            });
+
+            //resolve todas as promises e devolve a resposta
+            Promise
+                .all([currency, countries])
+                .then(responses => {
+                    console.log(responses);
+                });
+            
+            //resolve a mais rápida e manda a resposta
+            Promise
+                .race([currency, countries])
+                .then(responses => {
+                    console.log(responses);
+                });
+        </script>
+    </body>
+</html>

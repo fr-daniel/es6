@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>02 - Promises Example</title>
+    </head>
+    <body>
+
+        <script>
+            //pending
+            //resolved
+            //rejected
+
+          var posts = fetch('https://willianjusten.com.br/search.json');
+          
+        /*
+          posts
+            .then( data => data.json() )
+            .then( data => console.log( data ) );
+        */
+
+       /*  posts
+            .then( data => data.json() )
+            .then( data => {
+                data.map( post => console.log( post.title ) );
+            })
+            .catch(err => console.log(err) );
+        */
+
+        posts
+            .then( data => data.json() )
+            .then( data => {
+                throw new Error('ixi deu erro');
+            })
+            .catch(err => console.log(err) );
+
+        </script>
+    </body>
+</html>
