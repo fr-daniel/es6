@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>03 - Weakset Intro</title>
+    </head>
+    <body>
+
+        <script>
+            //não aceita valores primitivos
+            //não é um iterator
+            //guardar objetos únicos
+            let obj1 = {
+                name: 'Daniel',
+                age: 19
+            };
+
+            let obj2 = {
+                name: 'João',
+                age: 21
+            }
+
+            let ws = new WeakSet([obj1, obj2]);
+
+        </script>
+    </body>
+</html>

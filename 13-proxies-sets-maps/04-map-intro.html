@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>04 - Map Intro</title>
+    </head>
+    <body>
+
+        <script>
+            let nm = new Map();
+
+            nm.set(1, {name: 'Daniel', age: 19});
+            nm.set(2, {name: 'João', age: 29});
+
+            if( nm.has(1) ) {
+                console.log( nm.get(1) );
+            }
+
+            nm.forEach((valor, chave) => {
+                console.log( valor, chave );
+            });
+            
+            console.log( nm );
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>02 - Set Intro</title>
+    </head>
+    <body>
+
+        <script>
+            //não adiciona valores repetidos
+            let mySet = new Set(['daniel', 'joão', 'maria']);
+
+            mySet.add('josé');
+            mySet.add('josé');
+            mySet.add('josé');
+
+            mySet.delete('daniel');
+
+            console.log( mySet.has('joão'), mySet.has('Daniel') );
+
+            console.log( mySet.values().next() );
+
+            console.log( mySet.values() );
+
+            let it = mySet.values();
+            for( name of it ) {
+                console.log( name );
+            }
+
+            //mySet.clear();
+        </script>
+    </body>
+</html>
