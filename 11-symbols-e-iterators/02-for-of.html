@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>01 - Symbols Into</title>
+    </head>
+    <body>
+        <script>
+            /*
+                iterators
+                iterable
+            */
+
+            var txt = 'Quixadá'; //iterable
+            var it = txt[Symbol.iterator](); //iterator
+
+            //console.log( it.next() );
+
+            for( letter of txt ) {
+                console.log(letter);
+                if( letter === 'a' ) break;
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>01 - Symbols Into</title>
+    </head>
+    <body>
+        <script>
+            //Symbol não se modifica e é único
+            let foo = Symbol('name');
+            let bar = Symbol('name');
+
+            console.log( foo, bar );
+            console.log( foo == bar );
+
+            let obj = {
+                [Symbol('name')]: 'Daniel',
+                [Symbol('age')]: 19,
+                city: 'Quixadá'
+            }
+
+            console.log( obj );
+            console.log( Object.keys(obj) );
+            const symbols = Object.getOwnPropertySymbols(obj);
+            
+            const data = symbols.map( sym => obj[sym] );
+            console.log( data );
+
+        </script>
+    </body>
+</html>
