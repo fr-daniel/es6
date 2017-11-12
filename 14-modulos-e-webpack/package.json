@@ -1,0 +1,33 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "description": "Estudo sobre as novas funcionalidades da ECMAScript 6",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --colors --progress",
+    "watch": "npm run build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fr-daniel/es6.git"
+  },
+  "keywords": [
+    "ES6",
+    "JavaScriipt"
+  ],
+  "author": "Daniel Lima <fr.daniel.lima@gmail.com> (https://github.com/fr-daniel)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fr-daniel/es6/issues"
+  },
+  "homepage": "https://github.com/fr-daniel/es6#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "ramda": "^0.25.0"
+  }
+}
